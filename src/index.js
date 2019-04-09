@@ -17,7 +17,8 @@ const setClock = (seconds, minutes, hours) => {
 
 
 function* timeGen(secondsInMinutes, minutesInHour, hoursInDay) {
-  let [second, minute, hour] = [0, 0, 0];
+  const d = new Date();
+  let [second, minute, hour] = [d.getSeconds(), d.getMinutes(), d.getHours()];
 
   for(let h = 0; h < hoursInDay; h = h + 1) {
     for(let m = 0; m < minutesInHour; m = m + 1) {
