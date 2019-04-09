@@ -35,7 +35,7 @@ function* timeGen(secondsInMinutes, minutesInHour, hoursInDay) {
 }
 
 const init = () => {
-  let generator = timeGen(60, 60, 12);
+  let generator = timeGen(59, 59, 12);
   setClock(0, 0, 0);
 
   const timerId = setInterval(() => {
